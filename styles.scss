@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: black;
+}
+
+  // Nav bar
+.nav-wrapper {
+display: flex;
+justify-content: space-between;
+padding: 18px;
+background: linear-gradient(90deg, teal,rgb(0, 36, 36));    
+font-weight: 500;
+border-bottom: 3px solid rgb(158, 121, 20);
+}
+
+.left-side {
+display: flex;
+margin-left: 20px;
+}
+
+.right-side {
+margin-right: 20px;
+font-size: 1.1em;
+text-transform: uppercase;
+color: white;
+}
+
+.nav-wrapper > .left-side > div {
+margin-right: 20px;
+font-size: 0.9em;
+text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+height: 15px;
+border-bottom: 1px solid transparent;
+transition: border-bottom 0.5s;
+padding-bottom: 2px;
+}
+
+.nav-link-wrapper a {
+color: rgb(172, 172, 172);                           
+text-decoration: none;
+transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+border-bottom: 1px solid black;
+box-shadow: 0, 5, 5;
+}
+
+.nav-link-wrapper a:hover {
+color: black;
+}
+
+.active-nav-link {
+border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+color: black !important;
+}
+
+
+
+  // Parallax stuff
+.parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  
+  .background {
+    z-index: -2;
+    position: absolute;
+    display: flex;
+    background: url(Photos/Backgrounds/Gold1.jpg);
+    background-size: cover;
+    transform: translateZ(-600px) scale(3.3);
+    @include align-center;
+  }
+
+
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 100%;
+    padding: 30px;
+    text-align: center;
+    color: white;
+  }
+
+  .profile-image img {
+    max-width: 60%;
+    min-width: 150px;
+    object-fit: cover;
+    border: 3px solid rgb(0, 104, 104);
+    border-radius: 5px;
+    box-shadow: 4px 4px 3px rgba(0,0,0,0.5);
+    }
+
+    .profile-image2 img {
+      max-width: 60%;
+      object-fit: cover;
+      border: 3px solid rgb(0, 104, 104);
+      border-radius: 5px;
+      box-shadow: 4px 4px 3px rgba(0,0,0);
+    } 
+    
+    .profile {
+      @include align-center();
+    }
+
+    .profile-container {
+      max-width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid rgb(0, 104, 104);
+      background: radial-gradient(rgb(4, 59, 47),rgba(0, 65, 65, 0.98));
+      border-radius: 5px;
+      box-shadow: 4px 4px 3px rgba(0,0,0,0.5);
+    }
+
+      .intro h1 {
+      font-size: 4em;
+      padding: 20px;
+      text-shadow: 2px 2px black;
+      }
+
+      .intro p {
+        padding-bottom: 20px;
+        font-size: 1.3em;
+        text-shadow: 1px 2px black;
+        line-height: 150%;
+      }
+
+
+  .foreground {
+    height: 100vh;
+    background: url('Photos/Backgrounds/Black2.jpg');
+    background-size: cover;
+    @include align-center;
+  }
+  
+  .parallax_group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    
+    .parallax_layer {
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+
+  // Intro
+  .foreground {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+    .blurb {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      // margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+      .rant h1 {
+      padding: 30px;
+      font-size: 50px;
+      color: teal;
+      text-align: center;
+      }
+
+      .rant p {
+      padding: 20px;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      margin-bottom: 50px;
+      padding-left: 30px;
+      }
+  
+
+
+
+  // Portfolio
+  .foreground2 {
+    height: 100vh;
+    background: url('Photos/Backgrounds/Black2b.jpg');
+    background-size: cover;
+    @include align-center;
+  }
+  
+  .portfolio-items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+    .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    min-height: 20vh;
+    min-width: 80vw;
+    background:rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.6s;
+    border: 3px solid rgb(0, 105, 105);
+    border-radius: 20px;
+    margin: 30px;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.8);
+    text-decoration: none;
+    }
+
+
+    .portfolio-item:hover {
+    transform: scale(1.03);
+    z-index: 1;
+    background-blend-mode: darken;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 3px solid rgb(158, 121, 20);
+    box-shadow: 6px 6px 8px black;
+    }
+    
+      .subtitle {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding-left: 100px;
+      padding-right: 100px;
+      color: transparent;
+      font-size: 2em;
+      transition: all 0.3s;
+      }
+
+  .portfolio-item:hover .subtitle {
+    color: white;
+    transition: 0.6s;
+  }
+
+
+
+  // Contact
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 70vh !important;
+    background-color: black;
+  }
+
+    .contact-title h1 {
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 40px;
+      font-size: 4em;
+      margin-bottom: 30px;
+      color: teal;
+      line-height: 200%;
+    }
+    
+    .contact-title {
+      margin-top: 100px;
+      color: #fff;
+      // transition: all 1s ease-in-out;
+    }
+
+    .contact-me {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .contact-info {
+      justify-content: center;
+      align-items: center;
+      border: 1px solid teal;
+      margin: auto;
+      margin-bottom: 90px;
+      width: 61%;
+      height: 70%;
+    }
+
+    .contact-info h1, h2 {
+      text-align: center;
+      z-index: 1;
+      line-height: 10px;
+      font-size: 3em;
+      margin: 20px 40px;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      color: teal;
+    }
+
+    // .contact-info h2 {
+    //   font-size: 1.3em;
+    //   font-weight: 400;
+    //   color: rgb(160, 122, 27);
+    // }
+
+    .personal-info p {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      line-height: 150%;
+      font-size: 1.3em;
+      color: white;
+      margin: 40px 40px 10px 40px;
+    }
+    .smlinks {
+      z-index: 10;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .li-button {
+      background-image: url('Photos/Logos/Linkedin.png');
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      flex: 1;
+      height: 8vh;
+      margin-right: 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .fb-button {
+      background-image: url('Photos/Logos/Facebook.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      flex: 1;
+      height: 8vh;
+      margin-left: 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    form {
+      margin-top: 50px;
+      transition: all 1s ease-in-out;
+      text-align: center;
+    }
+
+    .form-control {
+      padding: 5px;
+      width: 60%;
+      background: transparent;
+      outline: none;
+      border: 1px solid teal;;
+      // border-bottom: 1px solid teal;
+      margin-bottom: 32px;
+      color: rgb(197, 197, 197);
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      text-align: bottom;
+      align-items: center;
+    }
+
+    .form-control-submit {
+      width: 10em;
+      background: black;
+      border: 1px solid teal;
+      color: grey;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      height: 50px;
+      margin-top: 20px;
+      transition: all 0.4s;
+      text-align: center;
+    }
+
+    .form-control-submit:hover {
+      background: teal;
+      color:white;
+      cursor: pointer;
+      }
+
+    .footer {
+      position: absolute;
+      height: 12vh;
+      width: 100%;
+      z-index: 10;
+      bottom: 0px;
+      background-color: rgb(0, 77, 77);
+      // background: linear-gradient(90deg rgb(0, 36, 36), teal) !important;
+      border-top: 3px solid rgb(158, 121, 20);
+    }
+} 

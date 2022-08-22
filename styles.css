@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: black;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  background: linear-gradient(90deg, teal, rgb(0, 36, 36));
+  font-weight: 500;
+  border-bottom: 3px solid rgb(158, 121, 20);
+}
+
+.left-side {
+  display: flex;
+  margin-left: 20px;
+}
+
+.right-side {
+  margin-right: 20px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-wrapper > .left-side > div {
+  margin-right: 20px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+  height: 15px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+  padding-bottom: 2px;
+}
+
+.nav-link-wrapper a {
+  color: rgb(172, 172, 172);
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+  box-shadow: 0, 5, 5;
+}
+
+.nav-link-wrapper a:hover {
+  color: black;
+}
+
+.active-nav-link {
+  border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+  color: black !important;
+}
+
+.parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+.parallax_wrapper .background {
+  z-index: -2;
+  position: absolute;
+  display: flex;
+  background: url(Photos/Backgrounds/Gold1.jpg);
+  background-size: cover;
+  transform: translateZ(-600px) scale(3.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallax_wrapper .intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 100%;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+.parallax_wrapper .profile-image img {
+  max-width: 60%;
+  min-width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid rgb(0, 104, 104);
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+.parallax_wrapper .profile-image2 img {
+  max-width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid rgb(0, 104, 104);
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px rgb(0, 0, 0);
+}
+.parallax_wrapper .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallax_wrapper .profile-container {
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(0, 104, 104);
+  background: radial-gradient(rgb(4, 59, 47), rgba(0, 65, 65, 0.98));
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+.parallax_wrapper .intro h1 {
+  font-size: 4em;
+  padding: 20px;
+  text-shadow: 2px 2px black;
+}
+.parallax_wrapper .intro p {
+  padding-bottom: 20px;
+  font-size: 1.3em;
+  text-shadow: 1px 2px black;
+  line-height: 150%;
+}
+.parallax_wrapper .foreground {
+  height: 100vh;
+  background: url("Photos/Backgrounds/Black2.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallax_wrapper .parallax_group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.parallax_wrapper .parallax_group .parallax_layer {
+  position: absolute;
+  inset: 0;
+}
+.parallax_wrapper .foreground {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.parallax_wrapper .blurb {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.parallax_wrapper .rant h1 {
+  padding: 30px;
+  font-size: 50px;
+  color: teal;
+  text-align: center;
+}
+.parallax_wrapper .rant p {
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-left: 30px;
+}
+.parallax_wrapper .foreground2 {
+  height: 100vh;
+  background: url("Photos/Backgrounds/Black2b.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallax_wrapper .portfolio-items {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.parallax_wrapper .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  min-height: 20vh;
+  min-width: 80vw;
+  background: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.6s;
+  border: 3px solid rgb(0, 105, 105);
+  border-radius: 20px;
+  margin: 30px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+.parallax_wrapper .portfolio-item:hover {
+  transform: scale(1.03);
+  z-index: 1;
+  background-blend-mode: darken;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 3px solid rgb(158, 121, 20);
+  box-shadow: 6px 6px 8px black;
+}
+.parallax_wrapper .subtitle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: transparent;
+  font-size: 2em;
+  transition: all 0.3s;
+}
+.parallax_wrapper .portfolio-item:hover .subtitle {
+  color: white;
+  transition: 0.6s;
+}
+.parallax_wrapper .contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 70vh !important;
+  background-color: black;
+}
+.parallax_wrapper .contact-title h1 {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  font-size: 4em;
+  margin-bottom: 30px;
+  color: teal;
+  line-height: 200%;
+}
+.parallax_wrapper .contact-title {
+  margin-top: 100px;
+  color: #fff;
+}
+.parallax_wrapper .contact-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.parallax_wrapper .contact-info {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid teal;
+  margin: auto;
+  margin-bottom: 90px;
+  width: 61%;
+  height: 70%;
+}
+.parallax_wrapper .contact-info h1, .parallax_wrapper h2 {
+  text-align: center;
+  z-index: 1;
+  line-height: 10px;
+  font-size: 3em;
+  margin: 20px 40px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: teal;
+}
+.parallax_wrapper .personal-info p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 150%;
+  font-size: 1.3em;
+  color: white;
+  margin: 40px 40px 10px 40px;
+}
+.parallax_wrapper .smlinks {
+  z-index: 10;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+.parallax_wrapper .li-button {
+  background-image: url("Photos/Logos/Linkedin.png");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 8vh;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.parallax_wrapper .fb-button {
+  background-image: url("Photos/Logos/Facebook.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 8vh;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.parallax_wrapper form {
+  margin-top: 50px;
+  transition: all 1s ease-in-out;
+  text-align: center;
+}
+.parallax_wrapper .form-control {
+  padding: 5px;
+  width: 60%;
+  background: transparent;
+  outline: none;
+  border: 1px solid teal;
+  margin-bottom: 32px;
+  color: rgb(197, 197, 197);
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  text-align: bottom;
+  align-items: center;
+}
+.parallax_wrapper .form-control-submit {
+  width: 10em;
+  background: black;
+  border: 1px solid teal;
+  color: grey;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 50px;
+  margin-top: 20px;
+  transition: all 0.4s;
+  text-align: center;
+}
+.parallax_wrapper .form-control-submit:hover {
+  background: teal;
+  color: white;
+  cursor: pointer;
+}
+.parallax_wrapper .footer {
+  position: absolute;
+  height: 12vh;
+  width: 100%;
+  z-index: 10;
+  bottom: 0px;
+  background-color: rgb(0, 77, 77);
+  border-top: 3px solid rgb(158, 121, 20);
+}/*# sourceMappingURL=styles.css.map */
