@@ -326,7 +326,8 @@ body {
   width: 60%;
   background: transparent;
   outline: none;
-  border: 1px solid teal;
+  border-bottom: 1px solid teal;
+  border-left: 1px solid teal;
   margin-bottom: 32px;
   color: rgb(197, 197, 197);
   font-size: 18px;
