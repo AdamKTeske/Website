@@ -1,0 +1,291 @@
+* /* CSS Reset */ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+  color: #000;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+  font-family: "Lato", sans-serif;
+}
+
+
+/* Introduction */
+.parallax_wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+.parallax_wrapper .background {
+  z-index: -2;
+  position: absolute;
+  display: flex;
+  background: url(Photos/Backgrounds/Gold1.jpg);
+  background-size: cover;
+  transform: translateZ(-600px) scale(3.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.parallax_wrapper .intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 100%;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+.parallax_wrapper .profile-image img {
+  max-width: 60%;
+  min-width: 150px;
+  max-height: 80vh;
+  object-fit: cover;
+  border: 3px solid rgb(0, 104, 104);
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+.parallax_wrapper .profile-image2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallax_wrapper .profile-image2 img {
+  max-width: 60%;
+  max-height: 80vh;
+  object-fit: cover;
+  border: 3px solid rgb(0, 104, 104);
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px rgb(0, 0, 0);
+}
+.parallax_wrapper .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parallax_wrapper .profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(rgb(4, 59, 47), rgba(0, 65, 65, 0.98));
+  padding: 20px;
+  border: 3px solid rgb(0, 104, 104);
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+.parallax_wrapper .intro h1 {
+  padding: 20px;
+  text-shadow: 2px 2px black;
+}
+.parallax_wrapper .intro p {
+  padding-bottom: 20px;
+  text-shadow: 1px 2px black;
+  line-height: 150%;
+}
+.pflink {
+  margin-top: 20px;
+}
+.pfbutton {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0px 0.5px 2.5px rgb(0, 125, 134);
+  transition: all 0.3s;
+}
+.pfbutton:hover {
+  color: rgb(0, 125, 134);
+  text-shadow: 0px 0.5px 0px rgb(0, 125, 134);
+}
+
+
+
+/* Welcome */
+.parallax_wrapper .foreground {
+  height: 100vh;
+  background: url("Photos/Backgrounds/Black2.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallax_wrapper .parallax_group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.parallax_wrapper .parallax_group .parallax_layer {
+  position: absolute;
+  inset: 0;
+}
+.parallax_wrapper .blurb {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.parallax_wrapper .rant h1 {
+  padding: 30px;
+  /* font-size: 50px; */
+  color: teal;
+  text-align: center;
+}
+.parallax_wrapper .rant p {
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-left: 30px;
+}
+
+
+/* Contact */
+.parallax_wrapper .contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 70vh !important;
+  background-color: black;
+}
+.parallax_wrapper .contact-title h1 {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  font-size: 4em;
+  color: teal;
+  line-height: 200%;
+}
+.parallax_wrapper .contact-title {
+  margin-top: 2em;
+  color: #fff;
+}
+.parallax_wrapper .contact-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  margin-bottom: 3em;
+}
+.parallax_wrapper .contact-info {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid teal;
+  margin: auto;
+  margin-bottom: 90px;
+  width: 61%;
+}
+.parallax_wrapper .contact-info h1 {
+  text-align: center;
+  z-index: 1;
+  line-height: 10px;
+  font-size: 2.5em;
+  margin: 20px 40px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: teal;
+}
+.parallax_wrapper .personal-info p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 150%;
+  font-size: 1em;
+  color: white;
+  margin: 40px 40px 10px 40px;
+}
+
+/* @media (max-width: 800px) {
+  .parallax_wrapper .contact-info h1 {
+    font-size: 1em;
+  }
+  .parallax_wrapper .personal-info p {
+    font-size: 0.5em;
+  }
+} */
+
+
+.parallax_wrapper .smlinks {
+  z-index: 10;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+.parallax_wrapper .li-button {
+  background-image: url("Photos/Logos/Linkedin.png");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 8vh;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.parallax_wrapper .fb-button {
+  background-image: url("Photos/Logos/Facebook.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 1;
+  height: 8vh;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.parallax_wrapper form {
+  margin-top: 50px;
+  transition: all 1s ease-in-out;
+  text-align: center;
+}
+.parallax_wrapper form input, .parallax_wrapper form textarea {
+  padding: 5px;
+  width: 60%;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-top: 1px solid teal;
+  border-left: 1px solid teal;
+  margin-bottom: 32px;
+  color: rgb(197, 197, 197);
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  text-align: bottom;
+  align-items: center;
+}
+.parallax_wrapper form button {
+  width: 10em;
+  background: black;
+  border: 1px solid teal;
+  color: grey;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 50px;
+  margin-top: 20px;
+  transition: all 0.4s;
+  text-align: center;
+}
+.parallax_wrapper .form-control-submit:hover {
+  background: teal;
+  color: white;
+  cursor: pointer;
+}
+.parallax_wrapper .footer {
+  position: absolute;
+  width: 100%;
+  height: 12vh;
+  z-index: 10;
+  bottom: 0px;
+  background-color: rgb(0, 77, 77);
+  border-top: 3px solid rgb(158, 121, 20);
+}/*# sourceMappingURL=styles.css.map */

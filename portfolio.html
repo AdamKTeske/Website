@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <title>Portfolio</title>
+  <link rel="icon" href="Photos/Logos/A.png">
+  <style>
+  * /* CSS Reset */ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 32px;
+    font-family: "Lato", sans-serif;
+    color: #000;
+  }
+
+  body { 
+    min-height: 100vh;
+    background-image: url("Photos/Backgrounds/Black2b.jpg");
+    background-size: cover;
+  }
+
+
+  /* Nav-bar */
+  .nav-wrapper {
+  display: flex;
+  padding: 16px;
+  background: linear-gradient(90deg, teal,rgb(0, 36, 36));    
+  font-weight: 500;
+  font-size: 0.5em;
+  border-bottom: 3px solid rgb(158, 121, 20);
+  text-transform: uppercase;
+  }
+
+  .link-wrapper {
+  margin: 0px 10px;
+  transition: 0.5s;
+  }
+
+  .link-wrapper a {
+  color: rgb(204, 201, 192);
+  text-decoration: none;
+  /* text-shadow: 0px 0.5px rgb(0, 0, 0); */
+  transition: all 0.5s;
+  }
+
+  .link-wrapper:hover {
+  border-bottom: 1px solid black;
+  }
+
+  .link-wrapper a:hover {
+  color: black;
+  }
+
+  .active-nav-link {
+  border-bottom: 1px solid black;
+  }
+
+  .active-nav-link a {
+  color: black !important;
+  }
+
+
+
+  /* Content */
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .title {
+    text-decoration: underline;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    /* filter: blur(4px); */
+    transition: all 0.5s;
+  }
+
+  .column:hover {
+    filter: none;
+  }
+
+  .title {
+    color: rgb(0, 103, 110);
+    font-weight: 600;
+    text-shadow: -1.5px 1px 1px black;
+    text-decoration: none;
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 78vh;
+    margin-top: 30px;
+  }
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    margin: 10px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    border-radius: 3px;
+    overflow: hidden;
+    color: transparent;
+    transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  .item:hover {
+    color: white;
+    transform: scale(1.005);
+    background-blend-mode: darken;
+    box-shadow: 2px 2px 6px black;
+  }
+
+
+  /* Footer */
+  .more {
+    font-size: 0.7em;
+  }
+
+  .morebutton {
+    margin-top: 5px;
+    cursor: pointer;
+    color: rgb(1, 94, 100);
+    text-decoration: none;
+    text-shadow: 0px 0.5px 2.5px rgb(0, 125, 134);
+    transition: all 0.3s;
+  }
+
+  .morebutton:hover {
+    color: rgb(0, 125, 134);
+    text-shadow: 0px 0.5px 0px rgb(0, 125, 134);
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    height: 5vh;
+    bottom: 0px;
+    background: linear-gradient(-90deg, teal,rgb(0, 36, 36)); 
+    border-top: 3px solid rgb(158, 121, 20);
+  }
+  </style>
+</head>
+
+<body>
+    <!-- NAV BAR -->
+  <div class="nav-wrapper">
+    <div class="link-wrapper">
+      <a href="index.html">Home</a>
+    </div>
+    <div class="link-wrapper active-nav-link">
+      <a href="portfolio.html">Portfolio</a>
+    </div>
+    <div class="link-wrapper">
+      <a href="resume.html">Resume</a>
+    </div>
+  </div>
+
+
+    <!-- BODY -->
+  <div class="container">
+    <div class="content items">
+    
+      <!-- Data Analysis -->
+      <div class="column column1">
+        <div class="title">Data Analysis</div>
+        
+        <a href="https://docs.google.com/document/d/17BDDUSsEY4V56VlGP9iyJPG5utYFqowiFOcPhrCBTWY/edit?usp=sharing" 
+        class="item da1" target="_blank" style="background-image: url(Photos/Backgrounds/R.jpg); background-size: cover;">PCSA Lab: Emotional Control vs. Performance Under Stress (RStudio)</a>
+        
+        <a href="https://docs.google.com/document/d/1O9fEwcsQ0QLRK2vwUKT_lpw4G_uzPna914-_GZNp9Qc/edit?usp=sharing" 
+        class="item da2" target="_blank" style="background-image: url(Photos/Backgrounds/Analysis2.jpg); background-size: cover;">Advanced Methods Seminar: In-Class Experiment Analysis</a>
+
+      </div>
+      
+
+      <!-- Data Visualization -->
+      <div class="column column2">
+        <div class="title">Data Visualization</div>
+        
+        <a href="https://public.tableau.com/views/SeniorYearJournalData/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" 
+        class="item dv1" target="_blank" style="background-image: url(Photos/Backgrounds/Journal.jpg); background-size: cover;">Personal Journal Data Project: Interactive Dashboard (Tableau)</a>
+        
+        <a href="https://drive.google.com/drive/folders/1I1LbibGK7gpiIxzXfofVb-iwMnWsPgJV?usp=sharing" 
+        class="item dv2" target="_blank" style="background-image: url(Photos/Backgrounds/Excel.jpg); background-size: cover;">Financial Report Example: Interactive Dashboard (Excel- Download Recommended)</a>
+      </div>
+      
+
+      <!-- Academic Writing -->
+      <div class="column column3">
+        <div class="title">Research Presentation</div>
+
+        <a href="https://docs.google.com/presentation/d/15QRV9y0H3SB5hr9r86lDyJCMjagl5RgO/edit?usp=sharing&ouid=115464067000580038113&rtpof=true&sd=true" 
+        class="item da2" target="_blank" style="background-image: url(Photos/Backgrounds/Vote.jpg); background-size: cover;">Lab Presentation: What Americans Remember From the 2020 Presidential Election</a>
+        
+        <a href="https://docs.google.com/document/d/1mxiMq7VK3bxox9jCkgngUt5R3Hr0RywoWSuLovfptQc/edit?usp=sharing" 
+        class="item aw1" target="_blank" style="background-image: url(Photos/Backgrounds/Court.jpg); background-size: cover;">Academic Paper: The Problems with Predicting Recidivism Using Psychology</a>
+      </div>
+      
+
+      <!-- Coding Projects -->
+      <!-- <div class="column column4">
+        <div class="title">Coding Projects</div>
+        
+        <a href="" 
+        class="item cp1" target="_blank" style="background-image: url(Photos/Backgrounds/Black1.jpg); background-size: cover;"></a>
+        
+        <a href="" 
+        class="item cp2" target="_blank" style="background-image: url(Photos/Backgrounds/Black1.jpg); background-size: cover;"></a>
+      </div>-->
+    </div> 
+
+
+      <!-- FOOTER -->
+    <div class="content more">
+      <a href="https://drive.google.com/drive/folders/1OCTtz3hYo9JhRujLKG2qdn56xMSMo9Dj?usp=sharing" target="_blank" class="morebutton">See More &#8594;
+      </a></div>
+    <div class="footer"></div>
+  </div>
+</body>
+
+</html>
