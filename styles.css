@@ -85,11 +85,13 @@ body {
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
 }
 .parallax_wrapper .intro h1 {
-  padding: 20px;
+  padding: 20px;  
+  font-size: 3em;
   text-shadow: 2px 2px black;
 }
 .parallax_wrapper .intro p {
   padding-bottom: 20px;
+  font-size: 0.8em;
   text-shadow: 1px 2px black;
   line-height: 150%;
 }
@@ -189,7 +191,7 @@ body {
   text-align: center;
   z-index: 1;
   line-height: 10px;
-  font-size: 2.5em;
+  font-size: 2em;
   margin: 20px 40px;
   padding-top: 30px;
   padding-bottom: 10px;
