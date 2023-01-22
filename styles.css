@@ -362,6 +362,7 @@ body {
   }
   .parallax_wrapper .contact-form .form-control-submit {
     width: 60vw;
+    margin-bottom: 150px;
   }
   .parallax_wrapper .footer {
     height: 0px;
