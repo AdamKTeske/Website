@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 24px;
+  font-size: clamp(12px, 24px, 24px);
   font-family: "Lato", sans-serif;
   color: #000;
   overflow: hidden;
@@ -291,3 +291,80 @@ body {
   background-color: rgb(0, 77, 77);
   border-top: 3px solid rgb(158, 121, 20);
 }/*# sourceMappingURL=styles.css.map */
+
+@media (max-width: 800px) {
+  .parallax_wrapper .background {
+    height: 100vh;
+  }
+  .parallax_wrapper .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .parallax_wrapper .profile-container {
+    margin: 10px;
+  }
+  .parallax_wrapper .profile-container p {
+    font-size: 3rem;
+  }
+  .parallax_wrapper .profile-image img {
+    height: 180px;
+    margin: 20px 0px;
+  }
+  .parallax_wrapper .profile-image2 img {
+    height: 0;
+    border: none;
+  }
+  .parallax_wrapper .intro {
+    padding: 0px;
+  }
+  .parallax_wrapper .intro h1 {
+    font-size: 2em;
+  }
+  .parallax_wrapper .rant h1 {
+    font-size: 2em;
+  }
+  .parallax_wrapper .intro p {
+    font-size: 0.5em;
+  }
+  .parallax_wrapper .rant p {
+    font-size: 0.60em;
+    text-align: left;
+  }
+  .parallax_wrapper .contact-info {
+    font-size: 1em;
+    width: 80%;
+    justify-content: top;
+  }
+  .parallax_wrapper .form {
+    font-size: 1em;
+    width: 80%;
+    justify-content: top;
+  }
+  .parallax_wrapper .contact-me {
+    grid-template-columns: 1fr;
+  }
+  .parallax_wrapper .contact-info h1 {
+    font-size: 1em;
+  }
+  .parallax_wrapper .contact-title h1 {
+    font-size: 1.8rem;
+  }
+  .parallax_wrapper .personal-info h1 {
+    margin: 0;
+    line-height: 2em;
+  }
+  .parallax_wrapper .personal-info p {
+    font-size: 0.7em;
+    margin: 0px;
+  }
+  .parallax_wrapper .contact-form form {
+    margin-bottom: 100px;
+  }
+  .parallax_wrapper .contact-form .form-control-submit {
+    width: 60vw;
+  }
+  .parallax_wrapper .footer {
+    height: 0px;
+    border: none;
+  }
+} 
