@@ -167,6 +167,26 @@
     background: linear-gradient(-90deg, teal,rgb(0, 36, 36)); 
     border-top: 3px solid rgb(158, 121, 20);
   }
+  
+  @media (max-width: 800px) {
+    /* Mobile */
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .footer {
+      background-color: none;
+      background: none;
+      border: none;
+    }
+    .content .more {
+      margin-top: 0px;
+      text-align: center;
+    }
+    .column .title {
+      text-align: center;
+    }
+  }
   </style>
 </head>
 
@@ -174,12 +194,12 @@
     <!-- NAV BAR -->
   <div class="nav-wrapper">
     <div class="link-wrapper">
-      <a href="index.html" aria-label="go back to the home page">Home</a>
+      <a href="index.html">Home</a>
     </div>
     <div class="link-wrapper active-nav-link">
-      <a href="portfolio.html" aria-label="adam teske portfolio">Portfolio</a>
+      <a href="portfolio.html">Portfolio</a>
     </div>
-<!--     <div class="link-wrapper">
+    <!-- <div class="link-wrapper">
       <a href="resume.html">Resume</a>
     </div> -->
   </div>
@@ -193,10 +213,10 @@
       <div class="column column1">
         <div class="title">Data Analysis</div>
         
-        <a href="https://docs.google.com/document/d/17BDDUSsEY4V56VlGP9iyJPG5utYFqowiFOcPhrCBTWY/edit?usp=sharing" aria-label="portfolio item 1- performance under stress lab"
+        <a href="https://docs.google.com/document/d/17BDDUSsEY4V56VlGP9iyJPG5utYFqowiFOcPhrCBTWY/edit?usp=sharing" 
         class="item da1" target="_blank" style="background-image: url(Photos/Backgrounds/R.jpg); background-size: cover;">PCSA Lab: Emotional Control vs. Performance Under Stress (RStudio)</a>
         
-        <a href="https://docs.google.com/document/d/1O9fEwcsQ0QLRK2vwUKT_lpw4G_uzPna914-_GZNp9Qc/edit?usp=sharing" aria-label="portfolio item 2- advanced research methods experiment"
+        <a href="https://docs.google.com/document/d/1O9fEwcsQ0QLRK2vwUKT_lpw4G_uzPna914-_GZNp9Qc/edit?usp=sharing" 
         class="item da2" target="_blank" style="background-image: url(Photos/Backgrounds/Analysis2.jpg); background-size: cover;">Advanced Methods Seminar: In-Class Experiment Analysis</a>
 
       </div>
@@ -206,10 +226,10 @@
       <div class="column column2">
         <div class="title">Data Visualization</div>
         
-        <a href="https://public.tableau.com/views/SeniorYearJournalData/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" aria-label="portfolio item 3- personal journal project"
+        <a href="https://public.tableau.com/views/SeniorYearJournalData/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" 
         class="item dv1" target="_blank" style="background-image: url(Photos/Backgrounds/Journal.jpg); background-size: cover;">Personal Journal Data Project: Interactive Dashboard (Tableau)</a>
         
-        <a href="https://drive.google.com/drive/folders/1I1LbibGK7gpiIxzXfofVb-iwMnWsPgJV?usp=sharing" aria-label="portfolio item 4- financial report responsive dashboard"
+        <a href="https://drive.google.com/drive/folders/1I1LbibGK7gpiIxzXfofVb-iwMnWsPgJV?usp=sharing" 
         class="item dv2" target="_blank" style="background-image: url(Photos/Backgrounds/Excel.jpg); background-size: cover;">Financial Report Example: Interactive Dashboard (Excel- Download Recommended)</a>
       </div>
       
@@ -218,10 +238,10 @@
       <div class="column column3">
         <div class="title">Research Presentation</div>
 
-        <a href="https://docs.google.com/presentation/d/15QRV9y0H3SB5hr9r86lDyJCMjagl5RgO/edit?usp=sharing&ouid=115464067000580038113&rtpof=true&sd=true" aria-label="portfolio item 5- memory lab presentation"
+        <a href="https://docs.google.com/presentation/d/15QRV9y0H3SB5hr9r86lDyJCMjagl5RgO/edit?usp=sharing&ouid=115464067000580038113&rtpof=true&sd=true" 
         class="item da2" target="_blank" style="background-image: url(Photos/Backgrounds/Vote.jpg); background-size: cover;">Lab Presentation: What Americans Remember From the 2020 Presidential Election</a>
         
-        <a href="https://docs.google.com/document/d/1mxiMq7VK3bxox9jCkgngUt5R3Hr0RywoWSuLovfptQc/edit?usp=sharing" aria-label="portfolio item 6- academic paper on predicting recidivism"
+        <a href="https://docs.google.com/document/d/1mxiMq7VK3bxox9jCkgngUt5R3Hr0RywoWSuLovfptQc/edit?usp=sharing" 
         class="item aw1" target="_blank" style="background-image: url(Photos/Backgrounds/Court.jpg); background-size: cover;">Academic Paper: The Problems with Predicting Recidivism Using Psychology</a>
       </div>
       
@@ -236,13 +256,13 @@
         <a href="" 
         class="item cp2" target="_blank" style="background-image: url(Photos/Backgrounds/Black1.jpg); background-size: cover;"></a>
       </div>-->
+      <div class="content more">
+        <a href="https://drive.google.com/drive/folders/1OCTtz3hYo9JhRujLKG2qdn56xMSMo9Dj?usp=sharing" target="_blank" class="morebutton">See More &#8594;
+        </a></div>
     </div> 
 
 
       <!-- FOOTER -->
-    <div class="content more">
-      <a href="https://drive.google.com/drive/folders/1OCTtz3hYo9JhRujLKG2qdn56xMSMo9Dj?usp=sharing" target="_blank" class="morebutton" aria-label="click here for more data analysis examples">See More &#8594;
-      </a></div>
     <div class="footer"></div>
   </div>
 </body>
